@@ -18,13 +18,11 @@ This project is based on a [Notification Window](http://www.codeproject.com/Arti
 
 ![Screenshot](Screenshots/example2.png)
 
-### How to use it
-You can install the lastest version using [NuGet](https://www.nuget.org/packages/Tulpep.NotificationWindow/)
-```powershell
-Install-Package Tulpep.NotificationWindow
-```
+### Forked From:
+https://github.com/Tulpep/Notification-Popup-Window
 
-And use it this way:
+
+### How to use it:
 ```cs
 var popupNotifier = new PopupNotifier();
 popupNotifier.TitleText = "Title of popup";
