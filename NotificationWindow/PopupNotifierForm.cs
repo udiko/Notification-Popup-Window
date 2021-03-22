@@ -11,6 +11,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using NotificationWindow;
 
 namespace Tulpep.NotificationWindow
 {
@@ -319,7 +320,7 @@ namespace Tulpep.NotificationWindow
             e.Graphics.DrawRectangle(penBorder, rcForm);
             if (Parent.ShowGrip)
             {
-                e.Graphics.DrawImage(Properties.Resources.Grip, (int)((this.Width - Properties.Resources.Grip.Width) / 2), (int)((Parent.HeaderHeight - 3) / 2));
+                e.Graphics.DrawImage(Resources.Grip, (int)((this.Width - Resources.Grip.Width) / 2), (int)((Parent.HeaderHeight - 3) / 2));
             }
             if (Parent.ShowCloseButton)
             {

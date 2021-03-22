@@ -1,14 +1,8 @@
-﻿/*
- *	Created/modified in 2011 by Simon Baer
- *	
- *  Licensed under the Code Project Open License (CPOL).
- */
-
-using System;
-using System.Drawing;
+﻿using System;
+using Tulpep.NotificationWindow;
 using System.Windows.Forms;
 
-namespace DemoApp
+namespace WinFormsDemoApp
 {
     public partial class Form1 : Form
     {
@@ -17,8 +11,11 @@ namespace DemoApp
             InitializeComponent();
         }
 
+
         private void btnShow_Click(object sender, EventArgs e)
         {
+            PopupNotifier popupNotifier1 = new PopupNotifier();
+
             popupNotifier1.TitleText = txtTitle.Text;
             popupNotifier1.ContentText = txtText.Text;
             popupNotifier1.ShowCloseButton = chkClose.Checked;
@@ -34,7 +31,7 @@ namespace DemoApp
             popupNotifier1.IsRightToLeft = chkIsRightToLeft.Checked;
             if (chkIcon.Checked)
             {
-                popupNotifier1.Image = Properties.Resources._157_GetPermission_48x48_72;
+                popupNotifier1.Image = Resources._157_GetPermission_48x48_72;
             }
             else
             {
@@ -49,5 +46,7 @@ namespace DemoApp
             this.Close();
             Application.Exit();
         }
+
+
     }
 }
